@@ -6,7 +6,7 @@ Dans le domaine de la paie, la période mensuelle, commençant le premier jour d
 Il est ainsi requis une fonction informatique capable de déterminer si la période de congés d'un employé se situe en totalité ou partiellement dans une période mensuelle. En cas d'empiètement de la période de congés sur plusieurs périodes mensuelles, la fonction devra diviser la période de congés en segments correspondant à chaque période mensuelle. Il est également exigé que cette application opère de façon autonome et puisse être intégrée à d'autres systèmes existants.
 
 ## Quelle est ma compréhension de l'énoncé ?
-En me basant sur la méthode [BDD (Behavior Driven Development)](https://github.com/b-fontaine/listo-exam-conges#bdd-behavior-driven-development), je vais fournir un scénario de testé basé sur un example mapping issu de mon imagination.
+En me basant sur la méthode [BDD (Behavior Driven Development)](https://github.com/b-fontaine/listo-exam-conges#bdd-behavior-driven-development), je vais fournir un scénario de test basé sur un example mapping issu de mon imagination.
 ``` gherkin
 Feature: Congés
   Relation entre congés et périodes mensuelles
@@ -24,6 +24,31 @@ Feature: Congés
       | 2018-01-15  | 2018-02-11 | 2018-01           | 2018-01-01    | 2018-01-14  |
       | 2018-01-15  | 2018-02-11 | 2018-02           | 2018-02-12    | 2018-02-28  |
 ``` 
+
+## Tester l'application
+J'ai choisi Flutter et Dart pour réaliser cet exercice et j'ai séparé mon code en deux projets :
+- conges_domain : package flutter (réutilisable) qui contient le code métier
+- conges_ui : interface graphique qui utilise `conges_domain`, sert à l'interaction utilisateur
+
+### Vérifier le code sur son poste
+Avant tou, il vous faudra avoir Flutter installé sur votre poste. Clonez le repository, allez dans les répertoires `conges_domain` et `conges_ui` pour exécuter la commande 
+``` shell
+# flutter pub get
+```
+
+puis 
+``` shell
+# flutter test --coverage
+```
+
+Vous verrez, par vous même, le résultat des tests. Il est possible de vérifier la couverture de code via les fichiers `lcov.info` générés et le site [LCOV Viewer](https://lcov-viewer.netlify.app/).
+
+Pour l'interface graphique, vous pouvez l'afficher sur votre poste au format web via la commande
+``` shell
+flutter run -d chrome
+``` 
+L'application reste, bien sur, accessible sur les autres plateformes depuis Android Studio ou VS Code.
+
 
 ## Mes pratiques
 
