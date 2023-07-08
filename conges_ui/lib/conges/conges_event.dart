@@ -1,5 +1,3 @@
-import 'package:conges_domain/periode/model/periode.dart';
-
 abstract class CongesEvent {}
 
 class CongesSelectDate extends CongesEvent {
@@ -23,5 +21,4 @@ class CongesSelectionneFinConges extends CongesSelectDate {
       : super(selectedDate: selectedDate);
 }
 
-class CongesCalculate extends CongesEvent {
-}
+class CongesCalculate extends CongesEvent {}

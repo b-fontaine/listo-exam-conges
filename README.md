@@ -31,7 +31,7 @@ J'ai choisi Flutter et Dart pour réaliser cet exercice et j'ai séparé mon cod
 - conges_ui : interface graphique qui utilise `conges_domain`, sert à l'interaction utilisateur
 
 ### Vérifier le code sur son poste
-Avant tou, il vous faudra avoir Flutter installé sur votre poste. Clonez le repository, allez dans les répertoires `conges_domain` et `conges_ui` pour exécuter la commande 
+Avant tout, il vous faudra avoir Flutter installé sur votre poste. Clonez le repository, allez dans les répertoires `conges_domain` et `conges_ui` pour exécuter la commande 
 ``` shell
 # flutter pub get
 ```
@@ -48,6 +48,9 @@ Pour l'interface graphique, vous pouvez l'afficher sur votre poste au format web
 flutter run -d chrome
 ``` 
 L'application reste, bien sur, accessible sur les autres plateformes depuis Android Studio ou VS Code.
+
+## Tester l'application directement en ligne
+Vous pourrez aussi tester l'application directement sur [un site dédié](https://exercice-listo.benoitfontaine.fr)
 
 
 ## Mes pratiques

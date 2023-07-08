@@ -30,7 +30,7 @@ void main() {
       await iTapText(tester, 'Fin des congés');
       await iTapText(tester, '20');
       await iTapText(tester, 'OK');
-      await iTapText(tester, 'Calculate Working Days');
+      await iTapText(tester, 'Calculer les jours de travail');
       await iSeeTextForCurrentYear(tester, 'YYYY-07-01');
       await iSeeTextForCurrentYear(tester, 'YYYY-07-02');
       await iSeeTextForCurrentYear(tester, 'YYYY-07-03');

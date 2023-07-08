@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "./conges_ui/build/web",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

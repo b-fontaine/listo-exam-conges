@@ -88,7 +88,7 @@ class CongesView extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () =>
                       context.read<CongesBloc>().add(CongesCalculate()),
-                  child: const Text('Calculate Working Days'),
+                  child: const Text('Calculer les jours de travail'),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

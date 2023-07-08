@@ -18,7 +18,7 @@ Feature: Conges
     And I tap {'Fin des congés'} text
     And I tap {'20'} text
     And I tap {'OK'} text
-    And I tap {'Calculate Working Days'} text
+    And I tap {'Calculer les jours de travail'} text
     Then I see <working_date> text for current year
       | working_date |
       | 'YYYY-07-01' |
